@@ -16,6 +16,6 @@ type GrpcServer struct {
 
 func NewServer(port int) (*JsonApiServer) {
   return &JsonApiServer{
-    port : port
+    port : port,
   }
 }
