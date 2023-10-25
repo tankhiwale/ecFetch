@@ -20,10 +20,10 @@ type Message struct {
 }
 
 // not exported 
-type emailFetcher struct {}
+type EmailFetcherImpl struct {}
 
 //This method is the concrete implementation of the fetching logic
-func (e *emailFetcher) FetchEmails() (Message, error) {
+func (e *EmailFetcherImpl) FetchEmails(c context.Context) (Message, error) {
 
 	message := Message{
 		from : "test",

@@ -2,6 +2,7 @@ package logging
 
 import (
 	"context"
+	"fmt"
 	"time"
 
 	service "github.com/tankhiwale/ecFetch/service"
@@ -22,6 +23,7 @@ func (s *loggingservice) FetchEmails(c context.Context) (message service.Message
 
   defer func(startTime time.Time) {
     //  use start time here to log something. maybe use logrus or slog
+    fmt.Println("logging service")
   }(time.Now())
 
   return s.next.FetchEmails(c) // too tightly coupled
