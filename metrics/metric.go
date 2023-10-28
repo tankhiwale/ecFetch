@@ -12,6 +12,7 @@ type metricservice struct {
   next service.EmailFetcher
 }
 
+// the mertic service has decorated the EmailFetcher service
 func NewMetricService(next service.EmailFetcher) service.EmailFetcher {
   return &metricservice{
     next : next,

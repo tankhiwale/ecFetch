@@ -14,6 +14,7 @@ type loggingservice struct {
    next service.EmailFetcher 
 }
 
+//the logging service has decorated the EmailFetcher service
 func NewLoggingService(next service.EmailFetcher) service.EmailFetcher{
   return &loggingservice{
     next : next,
